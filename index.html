@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>مركز فرن كار | لخدمات رش السيارات بالفرن الحراري والصيانة بالرياض</title>
+    <meta name="description" content="مركز فرن كار (FURN CAR) بالرياض - الصناعية القديمة. متخخصون في رش السيارات بالفرن الحراري الإيطالي الحديث، مطابقة الألوان بالكمبيوتر بدقة 100%، تعديل الصدمات والسمكرة الفاخرة، وحماية النانو سيراميك ضمان وجودة عالية.">
+    <meta name="keywords" content="فرن كار, FURN CAR, رش سيارات بالفرن, سمكرة سيارات, الصناعية القديمة, تلميع سيارات, نانو سيراميك, رش فرن الرياض, مطابقة الوان كمبيوتر">
+    <meta name="author" content="مركز فرن كار">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #0088cc;
+            --primary-dark: #005580;
+            --accent-orange: #ff7700;
+            --bg-dark: #0a0d14;
+            --card-bg: rgba(20, 27, 41, 0.75);
+            --card-border: rgba(0, 136, 204, 0.2);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 70px;
+        }
+
+        /* Fixed Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 75px;
+            background: rgba(10, 13, 20, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--card-border);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 52px;
+            width: auto;
+            border-radius: 6px;
+        }
+
+        .nav-logo-text {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-logo-text span {
+            color: var(--accent-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Hero Header */
+        header {
+            padding: 90px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 10%, #00334d 0%, var(--bg-dark) 80%);
+            position: relative;
+        }
+
+        .badge {
+            background: rgba(0, 136, 204, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.9rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #38bdf8 60%, var(--accent-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 35px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 136, 204, 0.6);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #cc5f00 100%);
+            color: white;
+            box-shadow: 0 4px 20px rgba(255, 119, 0, 0.35);
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 119, 0, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-blue);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Feature Stats */
+        .stats-section {
+            display: flex;
+            justify(Content: center;
+            gap: 45px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--accent-orange);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 70px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: 2.3rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 70px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-orange);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-blue);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 65px;
+            height: 65px;
+            background: rgba(0, 136, 204, 0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.9rem;
+            margin-bottom: 25px;
+            color: #38bdf8;
+        }
+
+        .card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        /* Gallery Grid - Updated for Real Images */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 70px;
+        }
+
+        .gallery-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-orange);
+            box-shadow: 0 15px 30px rgba(255, 119, 0, 0.2);
+        }
+
+        .gallery-img-wrapper {
+            position: relative;
+            height: 220px;
+            background: #06080d;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* تنسيق الصور الحقيقية في المعرض */
+        .gallery-actual-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* لضمان ملء الصورة للمساحة دون تمطط */
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover .gallery-actual-img {
+            transform: scale(1.05); /* حركة زوم بسيطة عند الهوفر */
+        }
+
+        .gallery-info {
+            padding: 22px;
+        }
+
+        .gallery-tag {
+            background: rgba(255, 119, 0, 0.15);
+            color: var(--accent-orange);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .gallery-info h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .gallery-info p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        /* Booking / Builder Section */
+        .builder-section {
+            background: linear-gradient(135deg, rgba(20, 27, 41, 0.95) 0%, rgba(10, 13, 20, 0.95) 100%);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 45px 35px;
+            margin-top: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .category-block {
+            margin-bottom: 35px;
+        }
+
+        .category-block h4 {
+            color: #38bdf8;
+            font-size: 1.25rem;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 15px;
+        }
+
+        .option-btn {
+            background: rgba(10, 13, 20, 0.8);
+            border: 2px solid var(--card-border);
+            padding: 15px;
+            border-radius: 14px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .option-btn:hover {
+            border-color: var(--primary-blue);
+        }
+
+        .option-btn.selected {
+            border-color: var(--accent-orange);
+            background: rgba(255, 119, 0, 0.15);
+            color: #fff;
+        }
+
+        .summary-box {
+            background: #06080d;
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Floating Contacts */
+        .floating-wa {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.9rem;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.1);
+        }
+
+        .floating-call {
+            position: fixed;
+            bottom: 95px;
+            left: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 18px rgba(0, 136, 204, 0.45);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-call:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            h1 { font-size: 2.2rem; }
+            .container { padding: 40px 15px; }
+            .builder-section { padding: 30px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <!-- الشعار يظهر هنا بشكل احترافي -->
+            <img src="logo.jpg" alt="مركز فرن كار" class="logo-img" onerror="this.style.display='none'">
+            <span class="nav-logo-text">FURN <span>CAR</span></span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#gallery">معرض الأعمال</a></li>
+            <li><a href="#features">لماذا نحن؟</a></li>
+            <li><a href="#booking">حجز موعد</a></li>
+            <li><a href="#location">موقع المركز</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="tel:+966562678525" class="btn btn-primary" style="padding: 9px 20px; font-size: 0.9rem;">
+                <i class="fa-solid fa-phone"></i> اتصل بنا
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <span class="badge"><i class="fa-solid fa-spray-can-sparkles"></i> المركز الأول لطلاء وصيانة السيارات بالرياض</span>
+        <h1>مركز فرن كار (FURN CAR) لطلاء وصيانة السيارات</h1>
+        <p class="hero-desc">متخصصون في رش السيارات بالفرن الحراري الإيطالي الحديث، مطابقة ألوان بالكمبيوتر بدقة 100%، تعديل الصدمات والسمكرة الفاخرة، وحماية النانو سيراميك ضمان وجودة عالية.</p>
+        
+        <div class="cta-buttons">
+            <a href="https://wa.me/966562678525?text=مرحبا%20مركز%20فرن%20كار،%20أرغب%20في%20الاستفسار%20عن%20رش/صيانة%20سيارتي" target="_blank" class="btn btn-accent">
+                <i class="fa-brands fa-whatsapp"></i> استشارة واتساب فورية
+            </a>
+            <a href="tel:+966562678525" class="btn btn-outline">
+                <i class="fa-solid fa-headset"></i> اتصل بالمهندس المباشر
+            </a>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">مطابقة لون الكمبيوتر</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">فرن إيطالي</div>
+                <div class="stat-label">تجفيف حراري متطور</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">ضمان ممتد</div>
+                <div class="stat-label">على جميع أعمال الرش</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- خدمات المركز -->
+        <div class="section-title" id="services">
+            <h2>خدماتنا المتخصصة</h2>
+            <p style="color: var(--text-muted);">نستخدم أحدث التقنيات لتعود سيارتك كالجديدة تماماً من المصنع</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-spray-can"></i></div>
+                <h3>رش السيارات بالفرن الحراري</h3>
+                <p>رش كامل أو جزئي بأجود أنواع البويات العالمية داخل أفران حرارية إيطالية مغلقة تعطي لمعة وصلابة المصنع الأصلي، وبضمان ممتد.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-car-burst"></i></div>
+                <h3>السمكرة وتعديل الصدمات (PDR)</h3>
+                <p>سمكرة احترافية وتعديل صدمات السيارات الشديدة والبسيطة مع إمكانية التعديل بدون رش (PDR) للحفاظ على قيمة السيارة الأصلية.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                <h3>مطابقة الألوان بالكمبيوتر</h3>
+                <p>نظام خلط ألوان إلكتروني متطور بدقة 100% يضمن لك مطابقة درجة لون السيارة الحالية دون أي اختلاف بين الأجزاء المقطوعة.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h3>تلميع ونانو سيراميك</h3>
+                <p>تلميع ساطع مائي على مراحل متعددة لإزالة الخدوش، مع إضافة طبقة حماية نانو سيراميك لحماية البوية من حرارة الشمس والعوامل الجوية.</p>
+            </div>
+        </div>
+
+        <!-- معرض الأعمال (صور حقيقية مصححة) -->
+        <div class="section-title" id="gallery">
+            <h2>معرض أعمالنا الحية</h2>
+            <p style="color: var(--text-muted);">نماذج حقيقية من داخل مركز فرن كار (FURN CAR) بالرياض</p>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- البطاقة الأولى: صورة الأدوات -->
+            <div class="gallery-card">
+                <div class="gallery-img-wrapper">
+                    <img src="tools.jpg" alt="أحدث أدوات ومعدات خلط الألوان والرش في فرن كار" class="gallery-actual-img">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-tag">تقنيات متطورة</span>
+                    <h4>أحدث معدات الرش وخلط الألوان</h4>
+                    <p>نستخدم مسدسات رش دقيقة وأنظمة خلط كمبيوتر لضمان الجودة المثالية.</p>
+                </div>
+            </div>
+
+            <!-- البطاقة الثانية: صورة الفني يرش -->
+            <div class="gallery-card">
+                <div class="gallery-img-wrapper">
+                    <img src="painting.jpg" alt="فني محترف يرتدي بدلة حماية ويرش سيارة فخمة في مركز فرن كار" class="gallery-actual-img">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-tag">سمكرة ورش احترافي</span>
+                    <h4>إعادة رش كامل ومطابقة ألوان</h4>
+                    <p>فنيون خبراء يضمنون لك نعومة ولمعة الفابريكا الأصلي دون أي أخطاء.</p>
+                </div>
+            </div>
+
+            <!-- البطاقة الثالثة: صورة الفرن الإيطالي -->
+            <div class="gallery-card">
+                <div class="gallery-img-wrapper">
+                    <img src="oven.jpg" alt="لقطة خارجية لفرن رش حراري إيطالي ضخم ومضاء في الصناعية القديمة" class="gallery-actual-img">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-tag">تجفيف حراري</span>
+                    <h4>أفران فرن حرارية إيطالية متطورة</h4>
+                    <p>تجفيف سريع وصلابة بوية تدوم لسنوات، في بيئة مغلقة وخالية من الغبار.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- حاسبة الخدمة والتواصل السريع -->
+        <div class="builder-section" id="booking">
+            <div class="section-title" style="margin-bottom: 30px;">
+                <h2>⚡ احسب خدمة سيارتك واحجز موعدك</h2>
+                <p style="color: var(--text-muted);">حدد الخدمات المطلوبة لترسلها مباشرة للمهندس عبر الواتساب للحصول على التكلفة والخصم</p>
+            </div>
+
+            <div class="category-block">
+                <h4><i class="fa-solid fa-car"></i> نوع الخدمة المطلوبة:</h4>
+                <div class="options-grid">
+                    <div class="option-btn" onclick="toggleOption(this)">رش فرن كامل للسيارة</div>
+                    <div class="option-btn" onclick="toggleOption(this)">رش قطع محددة (صدام / كبوت)</div>
+                    <div class="option-btn" onclick="toggleOption(this)">سمكرة وتعديل صدمات</div>
+                    <div class="option-btn" onclick="toggleOption(this)">تعديل بدون رش (PDR)</div>
+                    <div class="option-btn" onclick="toggleOption(this)">تلميع ساطع كامل</div>
+                    <div class="option-btn" onclick="toggleOption(this)">حماية نانو سيراميك</div>
+                </div>
+            </div>
+
+            <div class="summary-box">
+                <p id="selected-summary" style="color: var(--text-muted); font-size: 1.1rem;">يرجى اختيار الخدمة المطلوبة أعلاه</p>
+                <div style="margin-top: 25px;">
+                    <a id="whatsapp-link" href="https://wa.me/966562678525" target="_blank" class="btn btn-accent">
+                        <i class="fa-brands fa-whatsapp"></i> إرسال الطلب وحجز موعد عبر الواتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- موقع المركز -->
+        <div class="section-title" id="location" style="margin-top: 70px;">
+            <h2>موقع المركز والمزيّة الجغرافية</h2>
+            <p style="color: var(--text-muted);"><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> الرياض - الصناعية القديمة</p>
+        </div>
+
+        <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 30px; border-radius: 20px; text-align: center;">
+            <h3 style="color: #fff; margin-bottom: 15px;">نرحب بكم يومياً في مركز فرن كار (FURN CAR)</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">نضمن لك أعلى مستويات الجودة في الرش والسمكرة وبأفضل الأسعار المنافسة في الرياض.</p>
+            <a href="https://maps.google.com/?q=الرياض+الصناعية+القديمة" target="_blank" class="btn btn-primary">
+                <i class="fa-solid fa-map-location-dot"></i> فتح موقع الخريطة في قوقل ماب
+            </a>
+        </div>
+
+    </div>
+
+    <!-- الأزرار العائمة -->
+    <a href="tel:+966562678525" class="floating-call" title="اتصال مباشر">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <a href="https://wa.me/966562678525?text=مرحباً%20مركز%20فرن%20كار،%20أستفسر%20عن%20خدمات%20رش/صيانة%20السيارات" target="_blank" class="floating-wa" title="واتساب مباشر">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 <strong>مركز فرن كار (FURN CAR) لطلاء وصيانة السيارات</strong></p>
+        <p style="font-size: 0.85rem; margin-top: 5px; color: #64748b;">الرياض - الصناعية القديمة | هاتف: +966 56 267 8525</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        const phoneNumber = "966562678525";
+
+        function toggleOption(element) {
+            element.classList.toggle('selected');
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const selectedOptions = document.querySelectorAll('.option-btn.selected');
+            const summaryText = document.getElementById('selected-summary');
+            const waLink = document.getElementById('whatsapp-link');
+            
+            let servicesList = [];
+            selectedOptions.forEach(btn => servicesList.push(btn.innerText));
+            
+            if(servicesList.length > 0) {
+                summaryText.innerHTML = "الخدمات المختارة: <strong style='color:#38bdf8'>" + servicesList.join("، ") + "</strong>";
+                let textMsg = "مرحباً مركز فرن كار، أرغب في الاستفسار والحصول على تسعيرة للخدمات التالية: " + servicesList.join("، ");
+                waLink.href = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(textMsg);
+            } else {
+                summaryText.innerHTML = "يرجى اختيار الخدمة المطلوبة أعلاه";
+                waLink.href = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent("مرحباً مركز فرن كار، أرغب في الاستفسار عن خدمات رش وصيانة السيارات");
+            }
+        }
+    </script>
+</body>
+</html>
